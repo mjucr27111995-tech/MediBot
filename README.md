@@ -313,6 +313,11 @@ MediBot/
 │   │   └── rag_pipeline.py    # Full RAG orchestration
 │   ├── scripts/
 │   │   └── ingest.py          # Standalone ingestion script
+│   ├── tests/
+│   │   ├── test_auth.py       # JWT auth & demo user tests (11 tests)
+│   │   ├── test_rbac.py       # RBAC mapping & consistency (19 tests)
+│   │   ├── test_intent_router.py  # Semantic routing tests (15 tests)
+│   │   └── test_sql_clean.py  # SQL sanitization tests (12 tests)
 │   ├── requirements.txt
 │   └── .env.example
 ├── frontend/
