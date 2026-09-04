@@ -108,7 +108,7 @@ allowed)  │ Qdrant Hybrid   │
 | Dense Embeddings  | `sentence-transformers/all-MiniLM-L6-v2` (384 dims)                 |
 | Sparse Embeddings | `Qdrant/bm25` via FastEmbed                                         |
 | Reranker          | `cross-encoder/ms-marco-MiniLM-L-6-v2`                              |
-| LLM               | Google Gemini (`gemini-3.5-flash`)                                  |
+| LLM               | Google Gemini (`gemini-3.6-flash`)                                  |
 | Intent Routing    | Semantic Router (cosine similarity on embedding model, no LLM call) |
 | Auth              | JWT (python-jose + bcrypt)                                          |
 | LangChain         | QdrantVectorStore (RetrievalMode.HYBRID), create_sql_query_chain    |
@@ -217,7 +217,7 @@ RBAC is enforced **at the Qdrant vector store retrieval layer**, not at the appl
 **API Key for reviewer (Gemini 3.5 Flash):**
 
 ```
-GOOGLE_API_KEY=<AQ.Ab8RN6LR3qYZkZ3nSPY_rg65rLFFkoh3k6p4BhTEGF8t9N97hA>
+GOOGLE_API_KEY=<AQ.Ab8RN6IuVjGftiX_BmgRqyl9qu9-SxOkV7FZhGmzOw8jX30uhQ>
 ```
 
 > ⚠️ **Note:** This key is shared for assignment review purposes only. Please do not use it for other projects. The key has free-tier rate limits.
@@ -427,7 +427,7 @@ The initial hybrid retrieval returns 10 candidates (a wide net). A `cross-encode
 | ----------------------- | --------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------- |
 | Qdrant deployment       | Docker container                        | Local file mode                                   | Simpler setup; no Docker dependency needed                                |
 | Intent classification   | LLM-based classifier                    | Semantic router (embedding similarity)            | Faster, cheaper, no extra LLM call; same concept as Session 6             |
-| LLM model               | `gemini-2.0-flash` / `gemini-2.5-flash` | `gemini-3.5-flash`                                | Earlier Gemini models unavailable for new projects at time of development |
+| LLM model               | `gemini-2.0-flash` / `gemini-2.5-flash` | `gemini-3.6-flash`                                | Earlier Gemini models unavailable for new projects at time of development |
 | Password hashing        | `passlib` + `bcrypt`                    | `bcrypt` directly                                 | `passlib` has compatibility issues with newer `bcrypt` versions           |
 | Semantic router library | `semantic-router` package               | Custom implementation using `SentenceTransformer` | `semantic-router` has numpy version conflicts with other dependencies     |
 

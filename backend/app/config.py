@@ -9,7 +9,7 @@ class Settings(BaseSettings):
 
     # LLM
     google_api_key: str = Field(..., description="Google Generative AI API key")
-    llm_model: str = Field(default="gemini-2.5-flash", description="LLM model name")
+    llm_model: str = Field(default="gemini-3.6-flash", description="LLM model name")
 
     # Embedding
     embed_model: str = Field(
