@@ -214,13 +214,7 @@ RBAC is enforced **at the Qdrant vector store retrieval layer**, not at the appl
 3. Click **"Create API Key"** → select or create a Google Cloud project
 4. Copy the generated API key — you'll need it in Step 1
 
-**API Key for reviewer (Gemini 3.5 Flash):**
-
-```
-GOOGLE_API_KEY=<AQ.Ab8RN6IuVjGftiX_BmgRqyl9qu9-SxOkV7FZhGmzOw8jX30uhQ>
-```
-
-> ⚠️ **Note:** This key is shared for assignment review purposes only. Please do not use it for other projects. The key has free-tier rate limits.
+> **For reviewers:** Please create your own free API key using the steps above — it takes under a minute. The free tier of `gemini-3.6-flash` is sufficient to test all features.
 
 
 
